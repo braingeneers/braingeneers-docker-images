@@ -16,6 +16,7 @@ env:
   GITHUB_REF: ${{ github.ref }}
 
 permissions:
+  contents: read
   packages: write
 
 jobs:
