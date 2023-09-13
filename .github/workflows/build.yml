@@ -57,7 +57,7 @@ jobs:
           images: ${{ steps.registry_org.outputs.image_base }}/${{ matrix.IMAGE }}
           tags: |
             # set latest tag for default branch
-            type=raw,value=latest,enable={{is_default_branch}}
+            type=raw,value=latest
             type=raw,value=${{ steps.get_date.outputs.date_tag }}
 
       - name: Log in to registry
