@@ -1,0 +1,12 @@
+#!/bin/bash -l
+
+# ==== ONLY EDIT WITHIN THIS BLOCK =====
+
+export BRAINGENEERS_ENV="classroom"
+if ! [[ -z "${BRAINGENEERS_SCRATCH_PREFIX}" ]] && ! [[ -z "${JUPYTERHUB_USER}" ]]; then
+    export BRAINGENEERS_SCRATCH="${BRAINGENEERS_SCRATCH_PREFIX}/${JUPYTERHUB_USER}/"
+fi
+
+# ==== ONLY EDIT WITHIN THIS BLOCK =====
+
+exec "$@"
