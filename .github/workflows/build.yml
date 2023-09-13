@@ -39,7 +39,7 @@ jobs:
         id: registry_org
         run: |
           ORG=$(echo "${{ env.DOCKER_ORG }}" | tr '[:upper:]' '[:lower:]')
-          image_base=${{ env.DOCKER_REGISTRY }}/${ORG} >> $GITHUB_OUTPUT
+          echo "image_base=${{ env.DOCKER_REGISTRY }}/${ORG}" >> $GITHUB_OUTPUT
       
       # https://github.com/actions/runner-images/issues/2840#issuecomment-790492173
       - name: Free up disk space
