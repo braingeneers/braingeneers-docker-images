@@ -1,0 +1,62 @@
+# Any commit to master branch re-builds images, re-runs tests, and pushes SHA tags to DockerHub
+name: Build
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'LICENSE'
+      - 'README.md'
+  workflow_dispatch:
+
+env:
+  DOCKER_ORG: braingeneers
+  GITHUB_SHA: ${{ github.sha }}
+  GITHUB_REF: ${{ github.ref }}
+
+jobs:
+    build-images:
+      runs-on: ubuntu-latest
+      strategy:
+        fail-fast: false
+        matrix:
+          IMAGE: [classroom]
+      steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+  
+      - name: Set Job Environment Variables
+        run: |
+          CALVER="$( date -u '+%Y.%m.%d' )"
+          DOCKER_TAG=$CALVER
+          echo "DOCKER_TAG=${DOCKER_TAG}" >> $GITHUB_ENV
+      
+      # https://github.com/actions/runner-images/issues/2840#issuecomment-790492173
+      - name: Free up disk space
+        run: |
+          df -h
+          docker image ls
+          sudo apt clean
+          sudo rm -rf /usr/local/lib/android /usr/share/dotnet /opt/ghc
+          df -h
+      
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      
+      - name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          context: ${{ matrix.IMAGE }}
+          push: false
+          tags: |
+            ${{env.DOCKER_ORG}}/${{ matrix.IMAGE }}:master
+            ${{env.DOCKER_ORG}}/${{ matrix.IMAGE }}:${{env.DOCKER_TAG}}
+      
+      - name: Inspect Image
+        run: |
+            docker run ${{env.DOCKER_ORG}}/${{ matrix.IMAGE }}:master conda list
+            docker images ls
+      
+      - name: Test Image
+        run: |
+            docker run -u 1000 -w /srv/test -v $PWD:/srv/test ${DOCKER_ORG}/${{ matrix.IMAGE }}:master
