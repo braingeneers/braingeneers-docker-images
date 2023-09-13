@@ -7,6 +7,11 @@ dependencies:
   - ipykernel
   - jupyterlab-git
   - jupyter
+  - curl
+  - diptest
+  - ncdu
+  - pillow
+  - scipy
   - ffmpeg
   - rclone
   - awscli
