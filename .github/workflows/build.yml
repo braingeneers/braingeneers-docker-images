@@ -42,7 +42,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: ${{ env.REGISTRY }}/${{env.DOCKER_ORG}}/${{ matrix.IMAGE }}
+          images: ${{ env.DOCKER_REGISTRY }}/${{env.DOCKER_ORG}}/${{ matrix.IMAGE }}
           tags: |
             type=schedule,pattern=latest
             type=schedule,pattern={{date 'YYYY.MM.DD'}}
@@ -50,7 +50,7 @@ jobs:
       - name: Log in to registry
         uses: docker/login-action@v2
         with:
-            registry: ${{ env.REGISTRY }}
+            registry: ${{ env.DOCKER_REGISTRY }}
             username: ${{ github.actor }}
             password: ${{ secrets.GITHUB_TOKEN }}
 
@@ -67,9 +67,9 @@ jobs:
       
       - name: Inspect Image
         run: |
-            docker run ${{ env.REGISTRY }}/${{env.DOCKER_ORG}}/${{ matrix.IMAGE }}:latest conda list
+            docker run ${{ env.DOCKER_REGISTRY }}/${{env.DOCKER_ORG}}/${{ matrix.IMAGE }}:latest conda list
             docker images ls
       
       - name: Test Image
         run: |
-            docker run -u 1000 -w /srv/test -v $PWD:/srv/test ${{ env.REGISTRY }}/${{env.DOCKER_ORG}}/${{ matrix.IMAGE }}:latest
+            docker run -u 1000 -w /srv/test -v $PWD:/srv/test ${{ env.DOCKER_REGISTRY }}/${{env.DOCKER_ORG}}/${{ matrix.IMAGE }}:latest
