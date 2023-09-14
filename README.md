@@ -1,4 +1,4 @@
-# Braingeneers Docker Image Repository
+# Braingeneers Docker Images
 
 Welcome to the Braingeneers Docker Image repository! This repository is dedicated to providing users with Docker images tailored for building GitHub Codespaces with the necessary infrastructure for classroom and research purposes. The images are built daily using GitHub Actions to ensure you have access to the latest updates and features.
 
