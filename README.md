@@ -1,5 +1,9 @@
 # Braingeneers Docker Images
 
+[![ssec](https://img.shields.io/badge/SSEC-Project-purple?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAQAAABedl5ZAAAACXBIWXMAAAHKAAABygHMtnUxAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAMNJREFUGBltwcEqwwEcAOAfc1F2sNsOTqSlNUopSv5jW1YzHHYY/6YtLa1Jy4mbl3Bz8QIeyKM4fMaUxr4vZnEpjWnmLMSYCysxTcddhF25+EvJia5hhCudULAePyRalvUteXIfBgYxJufRuaKuprKsbDjVUrUj40FNQ11PTzEmrCmrevPhRcVQai8m1PRVvOPZgX2JttWYsGhD3atbHWcyUqX4oqDtJkJiJHUYv+R1JbaNHJmP/+Q1HLu2GbNoSm3Ft0+Y1YMdPSTSwQAAAABJRU5ErkJggg==&style=plastic)](https://escience.washington.edu/offshore-geodesy/)
+[![BSD License](https://badgen.net/badge/license/BSD-3-Clause/blue)](LICENSE)
+[![Build](https://github.com/braingeneers/braingeneers-docker-images/actions/workflows/build.yml/badge.svg)](https://github.com/braingeneers/braingeneers-docker-images/actions/workflows/build.yml)
+
 Welcome to the Braingeneers Docker Image repository! This repository is dedicated to providing users with Docker images tailored for building GitHub Codespaces with the necessary infrastructure for classroom and research purposes. The images are built daily using GitHub Actions to ensure you have access to the latest updates and features.
 
 ## Repository Contents
@@ -8,9 +12,10 @@ Welcome to the Braingeneers Docker Image repository! This repository is dedicate
 
 The repository contains two main Docker images:
 
-1. **Classroom Image:** This image provides the basic infrastructure required for educational purposes.
-
-2. **Research Image:** This image is designed for research activities and includes additional tools and libraries.
+Image | Description | Version | Size
+------|-------------|---------|------
+classroom | This image provides the basic infrastructure required for educational purposes. | [![version](https://ghcr-badge.egpl.dev/braingeneers/classroom/latest_tag?trim=major&label=latest&color=steelblue)](https://github.com/braingeneers/braingeneers-docker-images/pkgs/container/classroom) | [![size](https://ghcr-badge.egpl.dev/braingeneers/classroom/size?color=steelblue)](#)
+research | This image is designed for research activities and includes additional tools and libraries. | [![version](https://ghcr-badge.egpl.dev/braingeneers/research/latest_tag?trim=major&label=latest&color=steelblue)](https://github.com/braingeneers/braingeneers-docker-images/pkgs/container/classroom) | [![size](https://ghcr-badge.egpl.dev/braingeneers/research/size?color=steelblue)](#)
 
 ### Key Files
 
