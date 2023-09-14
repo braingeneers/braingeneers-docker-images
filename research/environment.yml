@@ -17,4 +17,5 @@ dependencies:
   - awscli
   - hdf5tools
   - pytables
+  - pytest
   - pip
