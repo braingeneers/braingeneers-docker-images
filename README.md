@@ -15,7 +15,7 @@ The repository contains two main Docker images:
 Image | Description | Version | Size
 ------|-------------|---------|------
 classroom | This image provides the basic infrastructure required for educational purposes. | [![version](https://ghcr-badge.egpl.dev/braingeneers/classroom/latest_tag?trim=major&label=latest&color=steelblue)](https://github.com/braingeneers/braingeneers-docker-images/pkgs/container/classroom) | [![size](https://ghcr-badge.egpl.dev/braingeneers/classroom/size?color=steelblue)](#)
-research | This image is designed for research activities and includes additional tools and libraries. | [![version](https://ghcr-badge.egpl.dev/braingeneers/research/latest_tag?trim=major&label=latest&color=steelblue)](https://github.com/braingeneers/braingeneers-docker-images/pkgs/container/classroom) | [![size](https://ghcr-badge.egpl.dev/braingeneers/research/size?color=steelblue)](#)
+research | This image is designed for research activities and includes additional tools and libraries. | [![version](https://ghcr-badge.egpl.dev/braingeneers/research/latest_tag?trim=major&label=latest&color=steelblue)](https://github.com/braingeneers/braingeneers-docker-images/pkgs/container/research) | [![size](https://ghcr-badge.egpl.dev/braingeneers/research/size?color=steelblue)](#)
 
 ### Key Files
 
