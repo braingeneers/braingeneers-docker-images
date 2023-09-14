@@ -22,7 +22,7 @@ Inside the Docker images, you'll find the following key files:
 
 - **environment.yml:** The environment.yml file allows users to define the libraries and packages they want to install using Conda Forge. This is particularly useful for setting up specific Python environments.
 
-- **postBuild:** The postBuild script is executed during the image build process. It automatically installs the latest `braingeneerspy` library and datasets into the `/home/joyvan/data/*` directory, ensuring you have access to the latest data and tools.
+- **postBuild:** The postBuild script is executed during the image build process. It automatically installs the latest `braingeneerspy` library and datasets into the `/home/joyvan/data/` directory, ensuring you have access to the latest data and tools.
 
 ## Usage
 
