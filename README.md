@@ -28,7 +28,7 @@ Inside the Docker images, you'll find the following key files:
 
 To use these Docker images, follow these steps:
 
-1. **Pull the Image:** You can pull the latest version of the desired image from the [GitHub Container Registry](https://github.com/Braingeneers/braingeneers-docker-images/pkgs/container/classroom) or [research image](https://github.com/Braingeneers/braingeneers-docker-images/pkgs/container/research) by running:
+1. **Pull the Image:** You can pull the latest version of the desired image from the GitHub Container Registry (GHCR) [classroom image](https://github.com/Braingeneers/braingeneers-docker-images/pkgs/container/classroom) or [research image](https://github.com/Braingeneers/braingeneers-docker-images/pkgs/container/research) by running:
 
    ```bash
    docker pull ghcr.io/braingeneers/classroom:latest
