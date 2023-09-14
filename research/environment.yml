@@ -7,6 +7,7 @@ dependencies:
   - ipykernel
   - jupyterlab-git
   - jupyter
+  - matplotlib
   - diptest
   - pillow
   - scipy
