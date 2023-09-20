@@ -4,5 +4,5 @@
 ${NB_PYTHON_PREFIX}/bin/pip install --no-cache git+https://github.com/uw-ssec/braingeneerspy.git#egg=braingeneers[data,iot,analysis,ml]
 
 ### Load in data for homeworks
-mkdir -p  /home/data
-aws --endpoint https://s3-west.nrp-nautilus.io s3 cp s3://braingeneers/ephys/2023-08-28-e-Math_Mind_Class/ /home/data/ --recursive --no-sign-request
+mkdir -p  /home/jovyan/data
+aws --endpoint https://s3-west.nrp-nautilus.io s3 cp s3://braingeneers/ephys/2023-08-28-e-Math_Mind_Class/ /home/jovyan/data/ --recursive --no-sign-request
