@@ -12,7 +12,11 @@ dependencies:
   - pillow
   - scipy
   - sphinx
+  - sphinx-autodoc-typehints
+  - sphinx_rtd_theme
+  - sphinx-copybutton
   - myst-parser
+  - furo
   - ffmpeg
   - rclone
   - awscli
