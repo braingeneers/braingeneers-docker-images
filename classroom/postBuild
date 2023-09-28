@@ -13,6 +13,7 @@ base_dir="${HOME}/data/ephys"
 # Create the base directory
 mkdir -p "$base_dir"
 
+
 # Define an array of dataset names
 dataset_names=("2023-08-28-e-Math_Mind_Class/") # Add dataset name here; no commas
 
