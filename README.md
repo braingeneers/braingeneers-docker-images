@@ -21,7 +21,7 @@ research | This image is designed for research activities and includes additiona
 
 Inside the Docker images, you'll find the following key files:
 
-- **Dockerfile:** The Dockerfile serves as the blueprint for creating the images. It is based on the PANGEO base image and includes all the necessary configurations and dependencies.
+- **Dockerfile:** The Dockerfile serves as the blueprint for creating the images. It is based on the [Pangeo community](https://pangeo.io/) [docker base image](https://github.com/pangeo-data/pangeo-docker-images) and includes all the necessary configurations and dependencies.
 
 - **apt.txt:** This file allows users to specify additional bash or shell packages they want to install within the Docker image. You can customize this file according to your requirements.
 
