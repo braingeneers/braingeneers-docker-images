@@ -1,4 +1,5 @@
 #!/bin/bash
 
 # Install the latest version of the Braingeneers Python package from GitHub
-${NB_PYTHON_PREFIX}/bin/pip install --no-cache git+https://github.com/braingeneers/braingeneerspy.git#egg=braingeneers[data,iot,analysis,ml]
+#${NB_PYTHON_PREFIX}/bin/pip install --no-cache git+https://github.com/braingeneers/braingeneerspy.git#egg=braingeneers[data,iot,analysis,ml]
+pip install braingeneerspy
