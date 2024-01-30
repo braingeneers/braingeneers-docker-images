@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install the latest version of the Braingeneers Python package from GitHub
-${NB_PYTHON_PREFIX}/bin/pip install --no-cache git+https://github.com/uw-ssec/braingeneerspy.git#egg=braingeneers[data,iot,analysis,ml]
+${NB_PYTHON_PREFIX}/bin/pip install --no-cache git+https://github.com/braingeneers/braingeneerspy.git#egg=braingeneers[data,iot,analysis,ml]
 
 # Install homework datasets from S3
 # This script will download the datasets from S3 and place them in the correct directory structure
